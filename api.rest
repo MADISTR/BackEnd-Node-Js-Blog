@@ -1,0 +1,154 @@
+POST	http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "mahdi",
+    "email": "elmahdilambarkidrissi@gmail.com",
+    "password": "123456",
+    "roles": ["admin", "user"]
+}
+
+###
+POST	http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "hamza",
+    "email": "hamza@gmail.com",
+    "password": "123456"
+}
+
+
+###
+DELETE http://localhost:8080/api/user/2
+
+
+###
+PUT	http://localhost:8080/api/user/2
+Content-Type: application/json
+
+{
+    "username": "h",
+    "email": "h@h.com"
+}
+
+###
+POST	http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+    "username": "hamza",
+    "password": "123456"
+}
+
+###
+POST	http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+    "username": "mahdi",
+    "password": "123456"
+}
+
+###
+POST http://localhost:8080/api/auth/signout
+Content-Type: application/json
+
+###
+GET  http://localhost:8080/api/test/user
+
+###
+GET  http://localhost:8080/api/test/admin
+
+###
+GET  http://localhost:8080/api/user/2
+
+###
+GET  http://localhost:8080/api/user/user
+Content-Type: application/json
+
+
+###
+POST	http://localhost:8080/api/articles/
+Content-Type: application/json
+
+{
+    "titre": "For safe life",
+    "contenu": "hello guys please safe the world!",
+    "userId": 1,
+    "tags": ["first_tag"]
+}
+
+###
+POST	http://localhost:8080/api/articles/
+Content-Type: application/json
+
+{
+    "titre": "Tuto#1",
+    "contenu": "Tuto#1 Description!",
+    "userId": 1,
+    "tags": ["Tag#1","Tag#2"]
+}
+
+
+###
+PUT	http://localhost:8080/api/articles/1
+Content-Type: application/json
+
+{
+    "titre": "Tuto#2",
+    "contenu": "Tuto#2 Description!",
+    "userId": 1,
+    "tags": ["Tag#3","Tag#2"]
+}
+
+
+###
+DELETE http://localhost:8080/api/articles/1
+
+
+###
+GET  http://localhost:8080/api/articles/
+
+###
+GET  http://localhost:8080/api/articles/1
+
+###
+GET  http://localhost:8080/api/articles/articleuser/1
+
+###
+POST	http://localhost:8080/api/comments/
+Content-Type: application/json
+
+{
+    "email": "elmahdilambarkidrissi@gmail.com",
+    "contenu": "nice one hamza",
+    "articleId": 2
+}
+
+###
+GET http://localhost:8080/api/comments/
+
+###
+GET http://localhost:8080/api/comments/1
+
+###
+POST	http://localhost:8080/api/tag/
+Content-Type: application/json
+
+{
+    "name": "Tag#3"
+}
+
+###
+GET http://localhost:8080/api/tag/
+
+
+###
+POST http://localhost:8080/api/tag/addarticle
+Content-Type: application/json
+
+{
+    "tagId": 3,
+    "articleId": 1
+}
